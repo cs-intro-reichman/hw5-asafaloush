@@ -112,15 +112,15 @@ public class MyString {
         if (str2 == null || str2.isEmpty()) {
             return str1;
         }
-        int[] str1F = new int[26];
-        for (int i = 0; i < str1.length(); i++) {
-            str1F[str1.charAt(i) - 'a']++;
+        int[] str2F = new int[26];
+        for (int i = 0; i < str2.length(); i++) {
+            str2F[str2.charAt(i) - 'a']++;
         }
         String newstr = "";
-        for (int i = 0; i < str2.length(); i++) {
-            char current = str2.charAt(i);
-            if (str1F[current - 'a'] > 0) {
-                str1F[current - 'a']--;
+        for (int i = 0; i < str1.length(); i++) {
+            char current = str1.charAt(i);
+            if (str2F[current - 'a'] > 0) {
+                str2F[current - 'a']--;
             }
             else{
                 newstr += current;
