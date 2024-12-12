@@ -109,6 +109,9 @@ public class MyString {
      * @return a string consisting of str1 minus all the characters of str2
      */
     public static String remove(String str1, String str2) {
+        if (str2 == null || str2.isEmpty()) {
+            return str1;
+        }
         int[] str1F = new int[26];
         for (int i = 0; i < str1.length(); i++) {
             str1F[str1.charAt(i) - 'a']++;
